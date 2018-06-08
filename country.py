@@ -15,6 +15,16 @@ class country:
         print("Country:",self.myself.name,"Url:",self.myself.url)
         for city in self.cities_list:
              print("City:",city.name,"Url:",city.url)
+    
+    def getUrl(self, location):
+        if self.myself.name.upper() == location.upper():
+            return self.myself.url
+        else:
+            for city in self.cities_list:
+                if city.name.upper() == location.upper():
+                    return city.url
+        return None
+
 
     
 
